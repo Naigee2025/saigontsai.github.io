@@ -51,7 +51,7 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             max-width: 600px;
             width: 100%;
-            text-align: left; /* 改為靠左對齊，閱讀長文較舒適 */
+            text-align: left;
         }
         .card-header { text-align: center; margin-bottom: 40px; }
         h1 { margin-bottom: 5px; color: #1d1d1f; }
@@ -61,20 +61,25 @@
         .bio strong { color: #1d1d1f; }
         .divider { height: 1px; background: #e1e1e5; border: none; margin: 30px 0; }
         .links { margin-top: 40px; display: flex; flex-direction: column; gap: 10px; text-align: center; }
+        
+        /* 按鈕樣式優化 */
         .btn {
-            display: inline-block;
+            display: block; /* 讓按鈕佔滿寬度，手機版更好按 */
             padding: 12px 24px;
             background-color: #0071e3;
             color: white;
             text-decoration: none;
-            border-radius: 980px;
+            border-radius: 12px; /* 稍微方一點的圓角，更現代 */
             font-weight: 500;
             transition: background 0.3s;
             text-align: center;
         }
         .btn:hover { background-color: #0077ed; }
-        .btn.secondary { background-color: #e8e8ed; color: #1d1d1f; }
-        .btn.secondary:hover { background-color: #d2d2d7; }
+        
+        /* 次要按鈕樣式 (灰色) */
+        .btn.secondary { background-color: #f5f5f7; color: #1d1d1f; border: 1px solid #d2d2d7; }
+        .btn.secondary:hover { background-color: #e8e8ed; }
+
         .footer { margin-top: 40px; font-size: 12px; color: #86868b; text-align: center;}
     </style>
 </head>
@@ -92,7 +97,7 @@
             Over 20 years of experience in wireless hardware R&D, specializing in solving complex EMI and antenna design challenges. Track record ranges from early laptop antenna modules and the metal unibody breakthrough in the HTC One series, to current hardware integration for the Google Pixel product line.</p>
             
             <p><strong>Key Achievements</strong><br>
-            • <strong>Patent CN103811863B:</strong> Invented key metal unibody antenna structure, pivotal in HTC's patent litigation victories against Chinese manufacturers.<br>
+            • <strong>US Patent 10,516,202 & CN103811863B:</strong> Invented key metal unibody antenna structure. This technology was pivotal in HTC's patent litigation victories against major Chinese manufacturers.<br>
             • <strong>Education:</strong> National Taiwan University (NTU) - M.S. in Comm. Engineering & EMBA.</p>
 
             <hr class="divider">
@@ -101,13 +106,16 @@
             擁有超過 20 年無線通訊硬體研發經驗，專注於解決複雜的電磁干擾與天線設計挑戰。從早期的筆記型電腦天線模組，到 HTC One 系列的全金屬機身突破，再到 Google Pixel 產品線的硬體整合。</p>
             
             <p><strong>關鍵成就 (Key Achievements)</strong><br>
-            • <strong>專利 CN103811863B:</strong> 發明關鍵金屬機殼天線結構，協助 HTC 贏得與中國廠商之專利訴訟。<br>
+            • <strong>美國專利 US10516202 與中國專利 CN103811863B:</strong> 發明關鍵金屬機殼天線結構。此技術協助 HTC 成功贏得與金立、魅族等廠商之專利訴訟。<br>
             • <strong>學歷:</strong> 國立臺灣大學 電信工程研究所碩士 & EMBA。</p>
         </div>
 
         <div class="links">
             <a href="https://www.linkedin.com/in/saigon-tsai-3ab713ba/" class="btn">View LinkedIn Profile</a>
-            <a href="https://patents.google.com/?inventor=Tiao-Hsing+Tsai" class="btn secondary">View Patents List</a>
+            
+            <a href="https://scholar.google.com/" class="btn secondary">Google Scholar Profile</a>
+
+            <a href="https://patents.google.com/?inventor=Tiao-Hsing+Tsai" class="btn secondary">View US & Global Patents</a>
         </div>
 
         <div class="footer">

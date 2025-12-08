@@ -59,10 +59,15 @@
         .bio { color: #424245; }
         .bio p { margin-bottom: 15px; }
         .bio strong { color: #1d1d1f; }
+        
+        /* 論文列表樣式優化 */
+        .publications-list { margin-top: 5px; padding-left: 20px; }
+        .publications-list li { margin-bottom: 12px; } /* 增加間距，讓長標題更好讀 */
+        
         .divider { height: 1px; background: #e1e1e5; border: none; margin: 30px 0; }
         .links { margin-top: 40px; display: flex; flex-direction: column; gap: 10px; text-align: center; }
         
-        /* 按鈕樣式優化 */
+        /* 按鈕樣式 */
         .btn {
             display: block;
             padding: 12px 24px;
@@ -73,12 +78,30 @@
             font-weight: 500;
             transition: background 0.3s;
             text-align: center;
+            border: 1px solid transparent;
         }
         .btn:hover { background-color: #0077ed; }
         
-        /* 次要按鈕樣式 (灰色) */
+        /* 次要按鈕樣式 */
         .btn.secondary { background-color: #f5f5f7; color: #1d1d1f; border: 1px solid #d2d2d7; }
         .btn.secondary:hover { background-color: #e8e8ed; }
+
+        /* Google 風格按鈕 */
+        .btn.google {
+            background-color: white;
+            color: #3c4043;
+            border: 1px solid #dadce0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .btn.google:hover { background-color: #f8f9fa; border-color: #dadce0; box-shadow: 0 1px 2px rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15); }
+        .google-icon { font-weight: bold; font-family: 'Product Sans', Arial, sans-serif; }
+        .g-blue { color: #4285F4; }
+        .g-red { color: #EA4335; }
+        .g-yellow { color: #FBBC05; }
+        .g-green { color: #34A853; }
 
         .footer { margin-top: 40px; font-size: 12px; color: #86868b; text-align: center;}
     </style>
@@ -100,6 +123,12 @@
             • <strong>US Patent 10,516,202 & CN103811863B:</strong> Invented key metal unibody antenna structure. This technology was pivotal in HTC's patent litigation victories against major Chinese manufacturers.<br>
             • <strong>Education:</strong> National Taiwan University (NTU) - M.S. in Comm. Engineering & EMBA.</p>
 
+            <p><strong>Publications</strong></p>
+            <ul class="publications-list">
+                <li><strong>M.S. Thesis (2000):</strong> Design of CPW-Fed Coplanar Strip Dipole Antenna.</li>
+                <li><strong>EMBA Thesis (2018):</strong> Competitive Strategy in Smartphone Market: A Case Study of Co-existence of Own Brand and ODM Business.</li>
+            </ul>
+
             <hr class="divider">
 
             <p><strong>關於我 (About Me)</strong><br>
@@ -108,12 +137,20 @@
             <p><strong>關鍵成就 (Key Achievements)</strong><br>
             • <strong>美國專利 US10516202 與中國專利 CN103811863B:</strong> 發明關鍵金屬機殼天線結構。此技術協助 HTC 成功贏得與金立、魅族等廠商之專利訴訟。<br>
             • <strong>學歷:</strong> 國立臺灣大學 電信工程研究所碩士 & EMBA。</p>
+
+            <p><strong>論文發表 (Publications)</strong></p>
+            <ul class="publications-list">
+                <li><strong>碩士論文 (2000):</strong> 共面波導饋入式共面帶狀偶極天線之設計。</li>
+                <li><strong>EMBA 論文 (2018):</strong> 智慧型手機市場之競爭策略：自有品牌與代工業務並行之個案研究。</li>
+            </ul>
         </div>
 
         <div class="links">
             <a href="https://www.linkedin.com/in/saigon-tsai-3ab713ba/" class="btn">View LinkedIn Profile</a>
             
-            <a href="https://scholar.google.com/citations?user=TPwmQH8AAAAJ&hl=zh-TW" class="btn secondary">Google Scholar Profile</a>
+            <a href="https://scholar.google.com/citations?user=TPwmQH8AAAAJ&hl=zh-TW" class="btn google">
+                <span class="google-icon"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span> Scholar Profile
+            </a>
 
             <a href="https://patents.google.com/?inventor=Tiao-Hsing+Tsai" class="btn secondary">View US & Global Patents</a>
         </div>
